@@ -1,129 +1,1054 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fatih Keleş | Portfolio</title>
-<style>
-:root{--bg:#0b1020;--card:#131a30;--text:#e5e7ee;--muted:#9aa3b8;--acc:#818cf8;--acc2:#22d3ee;--line:#222b47}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,"Segoe UI"l,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-weight:700;font-size:1.1rem}
-.logo span{color:var(--acc)}
-nav ul{display:flex;gap:28px;list-style:none}
-nav ul a{color:var(--muted);font-size:.95rem;transition:.2s}
-nav ul a:hover{color:var(--text)}
-section{padding:90px 0}
-h2{font-size:1.9rem;margin-bottom:36px}
-h2::after{content:"";display:block;width:48px;height:4px;border-radius:2px;margin-top:10px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
-.hero{min-height:88vh;display:flex;align-items:center;background:radial-gradient(600px 300px at 80% 20%,rgba(129,140,248,.18),transparent),radial-gradient(500px 300px at 10% 90%,rgba(34,211,238,.12),transparent)}
-.hero small{color:var(--acc2);letter-spacing:.12em;font-weight:600}
-.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.1;margin:12px 0}
-.hero h1 span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);max-width:560px;font-size:1.1rem;margin-bottom:32px}
-.btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:13px 26px;border-radius:10px;font-weight:600;transition:.2s;display:inline-block}
-.btn.primary{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#0b1020}
-.btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(129,140,248,.35)}
-.btn.ghost{border:1px solid var(--line);color:var(--text)}
-.btn.ghost:hover{border-color:var(--acc)}
-.about{display:grid;grid-template-columns:1.4fr 1fr;gap:32px}
-.about p{color:var(--muted);margin-bottom:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
-.card h3{font-size:1rem;margin-bottom:12px;color:var(--acc)}
-.card li{list-style:none;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--line)}
-.card li:last-child{border:0}
-.card li b{color:var(--text);display:block;font-weight:600}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tags span{background:rgba(129,140,248,.12);border:1px solid rgba(129,140,248,.3);padding:5px 14px;border-radius:999px;font-size:.88rem}
-.card .lvl{color:var(--muted);font-size:.85rem;margin-top:12px}
-.contact{text-align:center}
-.contact h2::after{margin:10px auto 0}
-.contact p{color:var(--muted);margin-bottom:28px}
-.mail{font-size:1.15rem}
-footer{text-align:center;padding:28px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-@media(max-width:720px){.about{grid-template-columns:1fr}nav ul{gap:16px}section{padding:64px 0}}
-</style>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Fatih Keleş — Web development, cloud computing ve modern yazılım teknolojilerine odaklanan junior developer."
+  >
+
+  <meta name="theme-color" content="#0b1020">
+
+  <title>Fatih Keleş — Web Developer</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<nav>
-  <div class="wrap">
-    <a href="#hero" class="logo">fatih<span>.dev</span></a>
-    <ul>
-      <li><a href="#hakkimda">Hakkımda</a></li>
-      <li><a href="#yetenekler">Yetenekler</a></li>
-      <li><a href="#iletisim">İletişim</a></li>
-    </ul>
-  </div>
-</nav>
 
-<header class="hero" id="hero">
-  <div class="wrap">
-    <small>MERHABA, BEN</small>
-    <h1><span>Fatih Keleş</span></h1>
-    <p>Bulut sistemlerine ilgi duyan, modern web arayüzleri geliştiren bilgisayar öğrencisi.</p>
-    <div class="btns">
-      <a class="btn primary" href="Fatih_Keles_CV.pdf" download>CV'mi İndir</a>
-      <a class="btn ghost" href="#iletisim">İletişime Geç</a>
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Ana navigasyon">
+
+      <a href="#top" class="logo" aria-label="Fatih Keleş ana sayfa">
+        fatih<span>.dev</span>
+      </a>
+
+      <ul class="nav-links">
+        <li>
+          <a href="#about">Hakkımda</a>
+        </li>
+
+        <li>
+          <a href="#projects">Projeler</a>
+        </li>
+
+        <li>
+          <a href="#contact">İletişim</a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+
+        <p class="eyebrow">
+          WEB DEVELOPER · CLOUD COMPUTING
+        </p>
+
+        <h1>
+         Merhaba, ben 
+          <span>Fatih.</span>
+        </h1>
+
+        <p class="hero-description">
+         Junior Full-Stack Developer
+        </p>
+
+        <div class="hero-actions">
+
+          <a
+            class="button button-primary"
+            href="Fatih_Keles_CV.pdf"
+            download
+          >
+            CV'yi İndir
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="#projects"
+          >
+            Projelerimi Gör
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">01 — HAKKIMDA</p>
+
+          <h2>
+           Hakkımda
+          </h2>
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-content">
+            <p>
+               Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi'nde Bulut Bilişim Operatörlüğü 2. sınıf öğrencisiyim. 
+               Junior Full-Stack Developer olarak web uygulamalarının frontend ve backend taraflarında çalışıyorum.
+            </p>
+           <p>
+             Frontend tarafında HTML, CSS, JavaScript, React ve TypeScript; backend tarafında ise Node.js, API geliştirme ve veritabanı teknolojileri üzerine çalışıyorum. 
+             Özellikle backend geliştirme, uygulama mimarisi ve veri yönetimi alanlarına odaklanıyorum.
+           </p>
+           <p>
+            Bulut bilişim eğitimim doğrultusunda Linux, Git, GitHub ve AWS teknolojileriyle de çalışıyorum.
+
+           </p>
+          </div>
+
+
+          <aside class="info-card">
+
+            <div class="info-group">
+
+              <h3>Eğitim</h3>
+
+              <p class="info-title">
+                Adana Alparslan Türkeş BTÜ
+              </p>
+
+              <p>
+                Bulut Bilişim Operatörlüğü
+                <br>
+                Önlisans · 2. Sınıf
+              </p>
+
+            </div>
+
+
+            <div class="info-group">
+
+              <h3>Şu an</h3>
+
+              <p>
+                Full-Stack development,
+                JavaScript ekosistemi ve
+                cloud technologies üzerine çalışıyorum.
+              </p>
+
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section class="section section-muted">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">02 — TEKNOLOJİLER</p>
+
+          <h2>
+            Çalıştığım
+            <span>teknolojiler.</span>
+          </h2>
+        </div>
+
+
+        <div class="skills-grid">
+
+          <article class="skill-group">
+
+            <h3>Frontend</h3>
+
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+            </ul>
+
+          </article>
+
+
+          <article class="skill-group">
+
+            <h3>Backend</h3>
+
+            <ul>
+              <li>Node.js</li>
+              <li>REST API</li>
+              <li>Authentication</li>
+              <li>Database Fundamentals</li>
+            </ul>
+
+          </article>
+
+
+          <article class="skill-group">
+
+            <h3>Cloud & Tools</h3>
+
+            <ul>
+              <li>AWS</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Linux</li>
+            </ul>
+
+          </article>
+
+
+          <article class="skill-group">
+
+            <h3>Learning</h3>
+
+            <ul>
+              <li>Python</li>
+              <li>AI APIs</li>
+              <!-- <li>LLM Development</li> -->
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">03 — PROJELER</p>
+
+          <h2>
+            Ürettiğim
+            <span>çalışmalar.</span>
+          </h2>
+
+          <p>
+            Web geliştirme ve bulut bilişim alanında öğrendiğim teknolojileri gerçek projelerde uyguluyorum.
+
+            Projelerimi tamamladıkça kaynak kodlarını GitHub üzerinden, çalışan sürümlerini ise canlı demolar üzerinden paylaşacağım.
+          </p>
+        </div>
+
+
+        <div class="projects-grid">
+
+          <!-- Future project -->
+          <article class="project-card project-card-placeholder">
+
+            <div class="project-number">
+              02
+            </div>
+
+            <div class="project-content">
+
+              <p class="project-status">
+                CURRENTLY BUILDING
+              </p>
+
+              <h3>
+                Bir sonraki ürün burada.
+              </h3>
+
+              <p>
+                Daha kapsamlı bir web uygulaması üzerinde
+                çalışıyorum. Proje tamamlandığında burada
+                detaylarını paylaşacağım.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Future project -->
+          <article class="project-card project-card-placeholder">
+
+            <div class="project-number">
+              02
+            </div>
+
+            <div class="project-content">
+
+              <p class="project-status">
+                CURRENTLY BUILDING
+              </p>
+
+              <h3>
+                Bir sonraki ürün burada.
+              </h3>
+
+              <p>
+                Daha kapsamlı bir web uygulaması üzerinde
+                çalışıyorum. Proje tamamlandığında burada
+                detaylarını paylaşacağım.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+
+      <div class="container contact-content">
+
+        <p class="section-label">
+          04 — İLETİŞİM
+        </p>
+
+        <h2>
+          İletişim
+        </h2>
+
+        <p>
+Staj, junior pozisyonlar, projeler veya teknik konular hakkında iletişime geçebilirsiniz.
+        </p>
+
+        <div class="contact-links">
+
+          <a
+            class="button button-primary"
+            href="mailto:fatihkeles033@gmail.com"
+          >
+            E-posta Gönder
+          </a>
+
+          <!-- GitHub URL'nizi buraya ekleyin -->
+          <a
+            class="button button-secondary"
+            href="https://github.com/fatihkeles0"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="container footer-content">
+
+      <p>
+        © 2026 Fatih Keleş tüm hakları saklıdır.
+      </p>
+
     </div>
-  </div>
-</header>
 
-<section id="hakkimda">
-  <div class="wrap">
-    <h2>Hakkımda</h2>
-    <div class="about">
-      <div>
-        <p>Merhaba, ben Fatih. Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi'nde 2. sınıf öğrencisiyim.</p>
-        <p>Bulut sistemleriyle ilgileniyorum ve bu alanda kendimi geliştirmeye devam ediyorum. Bunun yanında front-end tarafında HTML, CSS, JavaScript, TypeScript ve React ile çalışıyor, Node.js üzerinde de projeler geliştiriyorum.</p>
-        <p>Sürekli öğrenmeyi, yeni teknolojileri denemeyi ve ortaya çalışan bir şey koymayı seviyorum.</p>
-      </div>
-      <div class="card">
-        <h3>Eğitim</h3>
-        <ul>
-          <li><b>Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi</b>Bulut Bilişim Operatörlüğü, 2. sınıf</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<section id="yetenekler">
-  <div class="wrap">
-    <h2>Yeteneklerim</h2>
-    <div class="skills">
-      <div class="card">
-        <h3>Front-End</h3>
-        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span></div>
-      </div>
-      <div class="card">
-        <h3>Back-End</h3>
-        <div class="tags"><span>Node.js</span></div>
-        <p class="lvl">Üzerinde aktif çalışıyorum</p>
-      </div>
-      <div class="card">
-        <h3>Diğer</h3>
-        <div class="tags"><span>Python</span><span>Bulut Sistemleri</span></div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="iletisim" class="contact">
-  <div class="wrap">
-    <h2>İletişim</h2>
-    <p>Bir proje, staj veya sadece tanışmak için bana yazabilirsin.</p>
-    <a class="btn primary mail" href="mailto:fatihkeles033@gmail.com">fatihkeles033@gmail.com</a>
-  </div>
-</section>
-
-<footer>© 2026 Fatih Keleş</footer>
 </body>
 </html>
+
+
+<style>
+
+/* =========================
+   Variables
+========================= */
+
+:root {
+  --color-bg: #0b1020;
+  --color-surface: #11182b;
+  --color-surface-light: #151e35;
+
+  --color-text: #f1f3f7;
+  --color-text-muted: #9aa3b8;
+
+  --color-accent: #818cf8;
+  --color-accent-light: #a5b4fc;
+
+  --color-border: #252e45;
+
+  --container-width: 1040px;
+
+  --space-section: clamp(5rem, 10vw, 8rem);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+
+/* =========================
+   Reset
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+
+  background: var(--color-bg);
+  color: var(--color-text);
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* =========================
+   Accessibility
+========================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================
+   Layout
+========================= */
+
+.container {
+  width: min(
+    calc(100% - 3rem),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-section);
+}
+
+.section-muted {
+  background: var(--color-surface);
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: rgba(11, 16, 32, 0.94);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav {
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--color-accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+
+  transition:
+    color 160ms ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-text);
+}
+
+
+/* =========================
+   Typography
+========================= */
+
+.eyebrow,
+.section-label,
+.project-status {
+  color: var(--color-accent-light);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  max-width: 650px;
+
+  margin-top: 0.75rem;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.section-heading h2 span {
+  color: var(--color-text-muted);
+}
+
+.section-heading > p:last-child {
+  margin-top: 1rem;
+
+  color: var(--color-text-muted);
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  min-height: calc(100svh - 64px);
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-content {
+  padding-block: 6rem;
+}
+
+.hero h1 {
+  max-width: 850px;
+
+  margin-top: 1rem;
+
+  font-size: clamp(3rem, 9vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--color-accent);
+}
+
+.hero-description {
+  max-width: 650px;
+
+  margin-top: 2rem;
+
+  color: var(--color-text-muted);
+
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.hero-actions,
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  margin-top: 2rem;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+
+  padding-inline: 1.25rem;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: #090d19;
+}
+
+.button-primary:hover {
+  background: var(--color-accent-light);
+}
+
+.button-secondary {
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.button-secondary:hover {
+  border-color: var(--color-accent);
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(260px, 0.8fr);
+
+  gap: 5rem;
+}
+
+.about-content {
+  max-width: 680px;
+}
+
+.about-content p {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.about-content p + p {
+  margin-top: 1.25rem;
+}
+
+
+/* =========================
+   Info Card
+========================= */
+
+.info-card {
+  border-left: 1px solid var(--color-border);
+  padding-left: 2rem;
+}
+
+.info-group + .info-group {
+  margin-top: 2rem;
+}
+
+.info-group h3 {
+  margin-bottom: 0.5rem;
+
+  color: var(--color-accent-light);
+
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.info-group p {
+  color: var(--color-text-muted);
+}
+
+.info-group .info-title {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+
+/* =========================
+   Skills
+========================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.skill-group {
+  min-height: 220px;
+
+  padding: 1.75rem;
+
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.skill-group h3 {
+  margin-bottom: 1.25rem;
+
+  font-size: 1rem;
+}
+
+.skill-group li {
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+}
+
+.skill-group li + li {
+  margin-top: 0.5rem;
+}
+
+
+/* =========================
+   Projects
+========================= */
+
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+
+  min-height: 260px;
+
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-card:hover {
+  border-color: #39435f;
+  transform: translateY(-3px);
+}
+
+.project-number {
+  padding: 1.5rem;
+
+  color: var(--color-text-muted);
+
+  border-right: 1px solid var(--color-border);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-content h3 {
+  margin-top: 0.5rem;
+
+  font-size: 1.4rem;
+}
+
+.project-content > p:not(.project-status) {
+  max-width: 650px;
+
+  margin-top: 0.75rem;
+
+  color: var(--color-text-muted);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin-top: 1.25rem;
+}
+
+.project-tech li {
+  padding: 0.25rem 0.6rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.75rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.25rem;
+
+  margin-top: 1.5rem;
+}
+
+.project-links a {
+  color: var(--color-accent-light);
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-card-placeholder {
+  background: transparent;
+}
+
+
+/* =========================
+   Principles
+========================= */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+
+  background: var(--color-border);
+}
+
+.principles article {
+  min-height: 220px;
+
+  padding: 2rem;
+
+  background: var(--color-surface);
+}
+
+.principles article > span {
+  color: var(--color-accent);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.principles h3 {
+  margin-top: 2rem;
+}
+
+.principles p {
+  margin-top: 0.75rem;
+
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact {
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 760px;
+}
+
+.contact h2 {
+  margin-top: 0.75rem;
+
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.contact h2 span {
+  color: var(--color-accent);
+}
+
+.contact-content > p:not(.section-label) {
+  max-width: 550px;
+
+  margin: 1.25rem auto 0;
+
+  color: var(--color-text-muted);
+}
+
+.contact-links {
+  justify-content: center;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+  min-height: 60px;
+
+  align-items: center;
+  text-align: center;
+
+  color: var(--color-text-muted);
+  margin-top: 40px;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 800px) {
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .info-card {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+
+    padding-top: 2rem;
+    padding-left: 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: min(
+      calc(100% - 2rem),
+      var(--container-width)
+    );
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 15vw, 4.5rem);
+  }
+
+  .hero-content {
+    padding-block: 5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-number {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+}
+
+</style>
