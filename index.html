@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fatih Keleş | Portfolio</title>
+<style>
+:root{--bg:#0b1020;--card:#131a30;--text:#e5e7ee;--muted:#9aa3b8;--acc:#818cf8;--acc2:#22d3ee;--line:#222b47}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI"l,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:700;font-size:1.1rem}
+.logo span{color:var(--acc)}
+nav ul{display:flex;gap:28px;list-style:none}
+nav ul a{color:var(--muted);font-size:.95rem;transition:.2s}
+nav ul a:hover{color:var(--text)}
+section{padding:90px 0}
+h2{font-size:1.9rem;margin-bottom:36px}
+h2::after{content:"";display:block;width:48px;height:4px;border-radius:2px;margin-top:10px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+.hero{min-height:88vh;display:flex;align-items:center;background:radial-gradient(600px 300px at 80% 20%,rgba(129,140,248,.18),transparent),radial-gradient(500px 300px at 10% 90%,rgba(34,211,238,.12),transparent)}
+.hero small{color:var(--acc2);letter-spacing:.12em;font-weight:600}
+.hero h1{font-size:clamp(2.4rem,7vw,4.2rem);line-height:1.1;margin:12px 0}
+.hero h1 span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:560px;font-size:1.1rem;margin-bottom:32px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 26px;border-radius:10px;font-weight:600;transition:.2s;display:inline-block}
+.btn.primary{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#0b1020}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(129,140,248,.35)}
+.btn.ghost{border:1px solid var(--line);color:var(--text)}
+.btn.ghost:hover{border-color:var(--acc)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:32px}
+.about p{color:var(--muted);margin-bottom:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:1rem;margin-bottom:12px;color:var(--acc)}
+.card li{list-style:none;color:var(--muted);padding:6px 0;border-bottom:1px solid var(--line)}
+.card li:last-child{border:0}
+.card li b{color:var(--text);display:block;font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{background:rgba(129,140,248,.12);border:1px solid rgba(129,140,248,.3);padding:5px 14px;border-radius:999px;font-size:.88rem}
+.card .lvl{color:var(--muted);font-size:.85rem;margin-top:12px}
+.contact{text-align:center}
+.contact h2::after{margin:10px auto 0}
+.contact p{color:var(--muted);margin-bottom:28px}
+.mail{font-size:1.15rem}
+footer{text-align:center;padding:28px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media(max-width:720px){.about{grid-template-columns:1fr}nav ul{gap:16px}section{padding:64px 0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="#hero" class="logo">fatih<span>.dev</span></a>
+    <ul>
+      <li><a href="#hakkimda">Hakkımda</a></li>
+      <li><a href="#yetenekler">Yetenekler</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="wrap">
+    <small>MERHABA, BEN</small>
+    <h1><span>Fatih Keleş</span></h1>
+    <p>Bulut sistemlerine ilgi duyan, modern web arayüzleri geliştiren bilgisayar öğrencisi.</p>
+    <div class="btns">
+      <a class="btn primary" href="Fatih_Keles_CV.pdf" download>CV'mi İndir</a>
+      <a class="btn ghost" href="#iletisim">İletişime Geç</a>
+    </div>
+  </div>
+</header>
+
+<section id="hakkimda">
+  <div class="wrap">
+    <h2>Hakkımda</h2>
+    <div class="about">
+      <div>
+        <p>Merhaba, ben Fatih. Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi'nde 2. sınıf öğrencisiyim.</p>
+        <p>Bulut sistemleriyle ilgileniyorum ve bu alanda kendimi geliştirmeye devam ediyorum. Bunun yanında front-end tarafında HTML, CSS, JavaScript, TypeScript ve React ile çalışıyor, Node.js üzerinde de projeler geliştiriyorum.</p>
+        <p>Sürekli öğrenmeyi, yeni teknolojileri denemeyi ve ortaya çalışan bir şey koymayı seviyorum.</p>
+      </div>
+      <div class="card">
+        <h3>Eğitim</h3>
+        <ul>
+          <li><b>Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi</b>Bulut Bilişim Operatörlüğü, 2. sınıf</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="yetenekler">
+  <div class="wrap">
+    <h2>Yeteneklerim</h2>
+    <div class="skills">
+      <div class="card">
+        <h3>Front-End</h3>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>React</span></div>
+      </div>
+      <div class="card">
+        <h3>Back-End</h3>
+        <div class="tags"><span>Node.js</span></div>
+        <p class="lvl">Üzerinde aktif çalışıyorum</p>
+      </div>
+      <div class="card">
+        <h3>Diğer</h3>
+        <div class="tags"><span>Python</span><span>Bulut Sistemleri</span></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="iletisim" class="contact">
+  <div class="wrap">
+    <h2>İletişim</h2>
+    <p>Bir proje, staj veya sadece tanışmak için bana yazabilirsin.</p>
+    <a class="btn primary mail" href="mailto:fatihkeles033@gmail.com">fatihkeles033@gmail.com</a>
+  </div>
+</section>
+
+<footer>© 2026 Fatih Keleş</footer>
+</body>
+</html>
